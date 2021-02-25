@@ -2,4 +2,8 @@
     <string name="app_name">MyShoppingApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="search">Search Products</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="productDetails">Product Details</string>
+    <string name="availabily">See if it is Available</string>
+    <string name="addtocart">Add to Cart</string>
 </resources>

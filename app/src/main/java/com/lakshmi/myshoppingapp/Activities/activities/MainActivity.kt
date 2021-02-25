@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.core.view.GravityCompat
 import com.lakshmi.myshoppingapp.Activities.Fragments.AllProductsFragment
+import com.lakshmi.myshoppingapp.Activities.Fragments.DetailsFragment
 import com.lakshmi.myshoppingapp.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -60,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction= fragmentManager.beginTransaction()
         fragmentTransaction.add(R.id.frameLayout,fragment,"Product Fragment").addToBackStack("ProductFragment").commit()
     }
+
 
 
 

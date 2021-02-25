@@ -2,17 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_10"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <androidx.cardview.widget.CardView
     android:id="@+id/cardView"
     app:cardCornerRadius="@dimen/dp_30"
     android:layout_width="match_parent"
+    android:layout_marginRight="@dimen/dp_10"
     android:layout_height="@dimen/dp_250">
     <ImageView
+        android:src="@drawable/mybangle"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_home"
-        android:id="@+id/productImage"
+        android:id="@+id/ivImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </androidx.cardview.widget.CardView>
@@ -36,7 +38,7 @@
 
     <TextView
         android:textColor="@android:color/black"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="60dp"
         android:layout_width="@dimen/dp_50"
         android:layout_height="@dimen/dp_50"
         android:layout_below="@id/tvproductName"
