@@ -1,4 +1,4 @@
-package com.lakshmi.myshoppingapp
+package com.lakshmi.myshoppingapp.Activities.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,10 +8,11 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.core.view.GravityCompat
+import com.lakshmi.myshoppingapp.Activities.Fragments.AllProductsFragment
+import com.lakshmi.myshoppingapp.R
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.main.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             setDisplayHomeAsUpEnabled(true)
             setHomeAsUpIndicator(R.drawable.ic_homedrawer)
         }
+        launchFramentAllProducts()
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item?.itemId == R.id.actionCart) {
@@ -52,9 +54,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         return true
     }
 
-    override fun onClick(v: View?) {
-        when(v?.id){
-
-        }
+    fun launchFramentAllProducts(){
+        val fragment=AllProductsFragment()
+        val fragmentManager=supportFragmentManager
+        val fragmentTransaction= fragmentManager.beginTransaction()
+        fragmentTransaction.add(R.id.frameLayout,fragment,"Product Fragment").addToBackStack("ProductFragment").commit()
     }
+
+
+
+
 }

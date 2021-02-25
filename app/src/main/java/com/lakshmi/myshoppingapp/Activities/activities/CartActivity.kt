@@ -1,7 +1,8 @@
-package com.lakshmi.myshoppingapp
+package com.lakshmi.myshoppingapp.Activities.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.lakshmi.myshoppingapp.R
 
 class CartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
