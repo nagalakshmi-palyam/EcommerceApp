@@ -19,8 +19,6 @@ class ProductViewModel(val context: Context,private val owner: LifecycleOwner):V
 private val productRepository= ProductRepository(this)
 private val mutableList=MutableLiveData<ProductUI>()
 val liveData:LiveData<ProductUI> = mutableList
-
-
     fun getdataFromAPI(){
      ProductDatabase.getInstance(context).productDao.getProducts().observe(owner,{
          if(it.isNullOrEmpty()) {
@@ -38,14 +36,14 @@ val liveData:LiveData<ProductUI> = mutableList
          CoroutineScope(IO).launch {
 
                  for(i in 0 until it.size){
-                  val products= Products(productName = it[i].name.toString(),productPrice = it[i].price.toString(),productImage = it[i].photoUrl.toString())
+                  val products= Products(productName = it[i].name.toString(),productPrice = it[i].price.toString(),
+                      productImage = it[i].photoUrl.toString(),productDiscription = it[i].description.toString())
                   ProductDatabase.getInstance(context).productDao.insertProducts(products)
                  }
 
          }
 
         }
-
 
     }
 

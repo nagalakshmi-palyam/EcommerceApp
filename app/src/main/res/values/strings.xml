@@ -6,4 +6,18 @@
     <string name="productDetails">Product Details</string>
     <string name="availabily">See if it is Available</string>
     <string name="addtocart">Add to Cart</string>
+    <string name="cart">Your Cart</string>
+    <string name="shopnow">Shop Now!</string>
+    <string name="userName">User Name</string>
+    <string name="password">Password</string>
+    <string name="newUser">New User?</string>
+    <string name="signUp">SignUp</string>
+    <string name="clickHere">Click Here</string>
+    <string name="email">Email</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="gender">Gender</string>
+    <string name="Register">Register Your Details</string>
+    <string name="myProfile">My Profile</string>
+    <string name="name">Name </string>
+    <string name="login">Log In</string>
 </resources>

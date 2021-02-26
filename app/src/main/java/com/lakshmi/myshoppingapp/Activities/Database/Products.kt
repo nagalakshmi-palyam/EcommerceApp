@@ -13,5 +13,7 @@ data class Products (
     @ColumnInfo(name = "productPrice")
     val productPrice:String,
     @ColumnInfo(name = "productImage")
-    val productImage:String
+    val productImage:String,
+    @ColumnInfo(name = "productDiscription")
+    val productDiscription:String
 )

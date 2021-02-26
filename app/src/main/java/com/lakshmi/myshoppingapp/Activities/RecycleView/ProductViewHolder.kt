@@ -18,7 +18,7 @@ class ProductViewHolder(val view:View,val itemClickListener: ProductItemClickLis
                     .load(product.productImage)
                     .into(ivImage)
             } else{
-                ivImage.setImageResource(R.drawable.mybangle)
+              ivImage.setImageResource(R.drawable.mybangle)
             }
             tvproductName.text=product.productName
             tvproductPrice.text=product.productPrice

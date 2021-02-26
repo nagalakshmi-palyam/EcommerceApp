@@ -52,7 +52,10 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    // Glide Library to Upload Images
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    // Circuler Image View Dependency
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 }

@@ -22,6 +22,8 @@ import com.lakshmi.myshoppingapp.R
 import kotlinx.android.synthetic.main.fragment_all_products.*
 
 class AllProductsFragment : Fragment(),ProductItemClickListener {
+
+
     private var categoryList: MutableList<Category> = mutableListOf()
     private lateinit var categoryAdapter: CategoryAdapter
     private lateinit var productViewModel:ProductViewModel
@@ -59,7 +61,7 @@ class AllProductsFragment : Fragment(),ProductItemClickListener {
         categoryList.add(Category("Socks"))
         categoryList.add(Category("Dresses"))
         categoryList.add(Category("Watches"))
-        categoryList.add(Category("Arnaments"))
+        categoryList.add(Category("Bangles"))
         categoryList.add(Category("Sports"))
         categoryList.add(Category("Uniforms"))
         categoryList.add(Category("Sarees"))
@@ -89,8 +91,6 @@ class AllProductsFragment : Fragment(),ProductItemClickListener {
             it.let{
              this.productList=it
              productAdapter.updateProducts(productList)
-          // Toast.makeText(context,it[0].productImage,Toast.LENGTH_SHORT).show()
-           // Log.d("Lakshmi",it[0].productImage)
              progressbar.visibility=View.GONE
             }
 
@@ -99,6 +99,8 @@ class AllProductsFragment : Fragment(),ProductItemClickListener {
 
     override fun onItemClicked(product: Products, position: Int) {
       val intent=Intent(requireContext(),DetailsActivity::class.java)
+        intent.putExtra("image",product.productImage)
+        intent.putExtra("discription",product.productDiscription)
        startActivity(intent)
 
     }
