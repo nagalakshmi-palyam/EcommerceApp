@@ -3,6 +3,8 @@
     package="com.lakshmi.myshoppingapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -14,10 +16,10 @@
         <activity android:name=".Activities.activities.ProfileActivity"></activity>
         <activity android:name=".Activities.activities.LoginActivity" />
         <activity android:name=".Activities.activities.SignUpActivity" />
-        <activity android:name=".Activities.activities.SplashActivity" />
+        <activity android:name=".Activities.activities.MainActivity" />
         <activity android:name=".Activities.activities.DetailsActivity" />
         <activity android:name=".Activities.activities.CartActivity" />
-        <activity android:name=".Activities.activities.MainActivity">
+        <activity android:name=".Activities.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -30,6 +30,7 @@ class CartActivity : AppCompatActivity(), View.OnClickListener{
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.btnSubmit->{
+                Toast.makeText(this@CartActivity,"Order SuccessFully Placed", Toast.LENGTH_SHORT).show()
                 val intent= Intent(this@CartActivity,MainActivity::class.java)
                 startActivity(intent)
             }

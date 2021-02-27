@@ -19,7 +19,7 @@ abstract class DetailsDatabase: RoomDatabase(){
                 var instance = INSTANCE
                 if (instance == null) {
                     instance =
-                        Room.databaseBuilder(context, DetailsDatabase::class.java, "States_DB").build()
+                        Room.databaseBuilder(context, DetailsDatabase::class.java, "details_DB").build()
                     INSTANCE = instance
                 }
                 return instance

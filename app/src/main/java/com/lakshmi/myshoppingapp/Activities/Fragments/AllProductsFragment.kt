@@ -2,11 +2,14 @@ package com.lakshmi.myshoppingapp.Activities.Fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,7 +25,11 @@ import com.lakshmi.myshoppingapp.R
 import kotlinx.android.synthetic.main.fragment_all_products.*
 
 class AllProductsFragment : Fragment(),ProductItemClickListener {
-
+   /*
+   *This Fragment Displyas All Products in a RecyclerView
+   * Handled All Database Operation on Background
+   * Separated Logic from the UI using ViewModel and Repository
+    */
 
     private var categoryList: MutableList<Category> = mutableListOf()
     private lateinit var categoryAdapter: CategoryAdapter
@@ -48,12 +55,24 @@ class AllProductsFragment : Fragment(),ProductItemClickListener {
     }
 
     fun initViewsandLayouts(){
+
         buildproductList()
         setCategoryLayoutanAdapter()
         productViewModel=ProductViewModelFactory(this.requireContext(),requireActivity()).create(ProductViewModel::class.java)
         setProductlistAdapterandLayout()
         productViewModel.getdataFromAPI()
         fetchProductListFromDatabase()
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                searchProductsFromdatabase(query)
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                return false
+            }
+        })
+
     }
 
     private fun buildproductList(){
@@ -103,6 +122,14 @@ class AllProductsFragment : Fragment(),ProductItemClickListener {
         intent.putExtra("discription",product.productDiscription)
        startActivity(intent)
 
+    }
+  fun  searchProductsFromdatabase(products:String){
+      productViewModel.searchProducts(products).observe(this,{
+          it.let {
+              this.productList=it
+              productAdapter.updateProducts(it)
+          }
+      })
     }
 
 

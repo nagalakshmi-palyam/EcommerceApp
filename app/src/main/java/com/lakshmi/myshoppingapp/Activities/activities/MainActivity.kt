@@ -12,6 +12,11 @@ import com.lakshmi.myshoppingapp.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    /*
+    This Activity Having Navigation Drawer along with inflating a view of Coordinator layout for
+    Toolbar Actions
+     */
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,13 +24,33 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initViewsandLayouts(){
+        val userName=intent.getStringExtra("user")
+        val phoneNumber=intent.getStringExtra("phone")
+        val emaiId=intent.getStringExtra("email")
+        val gender=intent.getStringExtra("gender")
+        val profilePic=intent.getStringExtra("photo")
+       // Log.d("Lakshmi", intent.getStringExtra("user")+"")
+
+        /*
+        Navigation Drawer Items Action
+         */
         navigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
                     launchFramentAllProducts()
                 }
-                R.id.settings -> {
-
+                R.id.profile -> {
+                    val intent =Intent(this@MainActivity,ProfileActivity::class.java)
+                    intent.putExtra("name",userName)
+                    intent.putExtra("phoneNumber",phoneNumber)
+                    intent.putExtra("emailId",emaiId)
+                    intent.putExtra("genderF",gender)
+                    intent.putExtra("profilePhoto",profilePic)
+                    startActivity(intent)
+                }
+                R.id.cart->{
+                    val intent =Intent(this@MainActivity,CartActivity::class.java)
+                    startActivity(intent)
                 }
             }
             it.isChecked = true
@@ -38,6 +63,10 @@ class MainActivity : AppCompatActivity() {
         }
         launchFramentAllProducts()
     }
+
+    /*
+     Toolbar Items Action
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item?.itemId == R.id.actionCart) {
             Log.d("daniel", "going to cart")

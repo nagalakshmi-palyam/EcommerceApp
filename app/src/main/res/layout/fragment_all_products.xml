@@ -6,13 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Activities.Fragments.AllProductsFragment">
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="@dimen/dp_4"
         android:id="@+id/categoryRecyclerview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-    <androidx.appcompat.widget.SearchView
+    <SearchView
+        android:padding="@dimen/dp_10"
         android:id="@+id/searchView"
         app:queryHint="@string/search"
         android:layout_width="0dp"

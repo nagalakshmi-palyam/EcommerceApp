@@ -17,8 +17,6 @@ import retrofit2.Response
 
 class ProductViewModel(val context: Context,private val owner: LifecycleOwner):ViewModel(),Callback<List<ProductResponse>> {
 private val productRepository= ProductRepository(this)
-private val mutableList=MutableLiveData<ProductUI>()
-val liveData:LiveData<ProductUI> = mutableList
     fun getdataFromAPI(){
      ProductDatabase.getInstance(context).productDao.getProducts().observe(owner,{
          if(it.isNullOrEmpty()) {
@@ -51,9 +49,12 @@ val liveData:LiveData<ProductUI> = mutableList
 
     }
 
-    fun fetchFromDatabse() : LiveData<List<Products>> {
-     return ProductDatabase.getInstance(context).productDao.getProducts()
-
+    fun fetchFromDatabse(): LiveData<List<Products>> {
+        return productRepository.fetchProductsFromDatabse(context)
     }
+    fun searchProducts(productName:String,): LiveData<List<Products>> {
+       return productRepository.searchProductsFromDatabse(productName,context)
+    }
+
 
 }

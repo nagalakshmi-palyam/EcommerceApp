@@ -25,7 +25,7 @@ class SignUpActivity : AppCompatActivity() , View.OnClickListener{
      */
 
     private lateinit var signUpViewModel: SignUpViewModel
-    private var profilePath:String=""
+    private var profilePath:String="s"
     private val REQUEST_GET_SINGLE_FILE = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,10 +56,13 @@ class SignUpActivity : AppCompatActivity() , View.OnClickListener{
                         gender = etGender.text.toString(),
                         passWord = etPassword.text.toString(),
                         profileImage =profilePath
+
                     )
+                    Toast.makeText(this@SignUpActivity, profilePath, Toast.LENGTH_SHORT).show()
                 }
                 val intent= Intent(this@SignUpActivity,LoginActivity::class.java)
                 startActivity(intent)
+                Toast.makeText(this@SignUpActivity,"User Successfully Registerd!", Toast.LENGTH_SHORT).show()
             }
 
             R.id.ivProfile->{
@@ -75,7 +78,7 @@ class SignUpActivity : AppCompatActivity() , View.OnClickListener{
     /*
       Validating the Deatils
      */
-    var moblePattern= "[0-9] {10}"
+    var mobile=10
     fun isDataValid() : Boolean{
         if (etUserName.text.toString().isEmpty()) {
             etUserName.error = "FirstName Can not be empty"
@@ -85,7 +88,7 @@ class SignUpActivity : AppCompatActivity() , View.OnClickListener{
         if (etPhoneNumber.text.toString().isEmpty()) {
             etPhoneNumber.error = "Phone Number can not be empty"
             return false
-        } else if(etPhoneNumber.text.toString().equals(moblePattern)) {
+        } else if(etPhoneNumber.text.toString().length==mobile) {
             return true
         } else {
             etPhoneNumber.error = "Please Enter Valid Number"
@@ -104,10 +107,6 @@ class SignUpActivity : AppCompatActivity() , View.OnClickListener{
         if(etPassword.text.toString().isEmpty()){
             etPassword.error="Password Should not be Empty"
             return false
-        } else if(etPassword.text.toString().length<5||etPassword.length()>5){
-            return false
-        } else {
-            return true
         }
         return true
 
@@ -164,12 +163,6 @@ class SignUpActivity : AppCompatActivity() , View.OnClickListener{
         val picturePath = cursor.getString(columnIndex)
         cursor.close()
         Log.d("Lakshmi ", "Picture path $picturePath")
-        Toast.makeText(this@SignUpActivity, "Picture Path$picturePath", Toast.LENGTH_SHORT).show()
-        Toast.makeText(
-            this@SignUpActivity,
-            "Pictureselected Path$selectedImageUri",
-            Toast.LENGTH_SHORT
-        ).show()
         profilePath=picturePath
         ivProfile.setImageURI(Uri.parse(picturePath))
         return picturePath

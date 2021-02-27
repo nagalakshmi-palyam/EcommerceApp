@@ -38,7 +38,7 @@
 
     <TextView
         android:textColor="@android:color/black"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="50dp"
         android:layout_width="@dimen/dp_50"
         android:layout_height="@dimen/dp_50"
         android:layout_below="@id/tvproductName"
