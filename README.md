@@ -8,6 +8,7 @@
    * Additional Components : RecycyclerView,Fragments,NavigationDrawer and Coordinator Layout
    * Architecture : MVVM(Architectural Components : Livadata,View Model)
    * Database : Roomdatase (Library)
+   * Retrofit (Library)
 ## Screenshots and Description :
 * Splash Activity and SignUp Activity : 
   1. SignUpActivity to register the user details. 
