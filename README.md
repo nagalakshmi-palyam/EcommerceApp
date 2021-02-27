@@ -12,7 +12,8 @@
 # Screenshots and Description :
   * Splash Activity and SignUp Activity : 
     1. SignUpActivity to register the user details. 
-    2. Here these user details are inserting into database and business logic separated from the UI ![splash(3)](https://user-images.githubusercontent.com/68853216/109376633-f8b21480-78eb-11eb-81ad-a9b91a440e28.png)
+    2. Here these user details are inserting into database and business logic separated from the UI 
+![splash(3)](https://user-images.githubusercontent.com/68853216/109376633-f8b21480-78eb-11eb-81ad-a9b91a440e28.png)
 ![signUP](https://user-images.githubusercontent.com/68853216/109376650-1da68780-78ec-11eb-98db-50c0a3a1321e.png)
 
  * LoginActivity and MAinACtivity :
