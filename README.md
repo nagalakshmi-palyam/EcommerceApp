@@ -1,14 +1,14 @@
 # EcommerceApp
  * It is an Ecommerce app which displays all the Products along with their details and can add those products to cart.
  
- # Teck stacks :
+ ## Teck stacks :
    
    * Android Tools : Android Studio
    * Android Components : Activities and Intents
    * Additional Components : RecycyclerView,Fragments,NavigationDrawer and Coordinator Layout
    * Architecture : MVVM(Architectural Components : Livadata,View Model)
    * Database : Roomdatase (Library)
-# Screenshots and Description :
+## Screenshots and Description :
 * Splash Activity and SignUp Activity : 
   1. SignUpActivity to register the user details. 
   2. Here these user details are inserting into database and business 
