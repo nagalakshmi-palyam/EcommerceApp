@@ -29,8 +29,9 @@
  ![allproducts](https://user-images.githubusercontent.com/68853216/109376708-6a8a5e00-78ec-11eb-963b-0292485428e2.png)
 
 * DetailsActivity and SearchProducts :
+  
    1.Details activity displays a particular product details along with 
-    discription on click product on allproductsfragment.
+      discription on click product on allproductsfragment.
    2.Based on product name we can search the products.
 
  ![details](https://user-images.githubusercontent.com/68853216/109376819-17fd7180-78ed-11eb-96a1-e7bb5e191fa4.png)
