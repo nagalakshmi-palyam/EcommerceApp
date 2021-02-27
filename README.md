@@ -29,16 +29,16 @@
  ![allproducts](https://user-images.githubusercontent.com/68853216/109376708-6a8a5e00-78ec-11eb-963b-0292485428e2.png)
 
 * DetailsActivity and SearchProducts :
-  1.Details activity displays a particular product details along with 
-    discription on click product on allproductsfragment.
-  2.Based on product name we can search the products.
+  1. Details activity displays a particular product details along with 
+     discription on click product on allproductsfragment.
+  2. Based on product name we can search the products.
 
  ![details](https://user-images.githubusercontent.com/68853216/109376819-17fd7180-78ed-11eb-96a1-e7bb5e191fa4.png)
  ![search(1)](https://user-images.githubusercontent.com/68853216/109376894-804c5300-78ed-11eb-9c0a-c71277027f61.png)
 
 * CartActivity and NavigationDrawer :
-  1.We can add aprticular product to cart. 
-  2.Navigation drawer with some items to perform specific operations.
+  1. We can add aprticular product to cart. 
+  2. Navigation drawer with some items to perform specific operations.
 
 ![cart](https://user-images.githubusercontent.com/68853216/109376829-2ba8d800-78ed-11eb-91af-e3a35061cc41.png)
 ![navigation](https://user-images.githubusercontent.com/68853216/109376719-8130b500-78ec-11eb-9c48-489160a098c7.png)
