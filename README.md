@@ -13,7 +13,10 @@
  
  * Splash Activity and SignUp Activity : 
     1. SignUpActivity to register the user details. 
-    2. Here these user details are inserting into database and business logic separated from the UI.
+    2. Here these user details are inserting into database and business logic separated from the UI
+![splash(3)](https://user-images.githubusercontent.com/68853216/109376633-f8b21480-78eb-11eb-81ad-a9b91a440e28.png)
+![signUP](https://user-images.githubusercontent.com/68853216/109376650-1da68780-78ec-11eb-98db-50c0a3a1321e.png)
+
  * LoginActivity and MAinACtivity :
    1. Login Activity here we Validating the user details based on Search query of database.
    2. MainActivity has a container to launch products fragment.It has a SearchView,
@@ -21,9 +24,6 @@
    4. Products fragment displays the all the products in a recyclerview with price and along with
        listener to select a particular product.
    5. It displays Categories of products in a horizantal way in a recyclerview.
-  
-![splash(3)](https://user-images.githubusercontent.com/68853216/109376633-f8b21480-78eb-11eb-81ad-a9b91a440e28.png)
-![signUP](https://user-images.githubusercontent.com/68853216/109376650-1da68780-78ec-11eb-98db-50c0a3a1321e.png)
 
 ![login(2)](https://user-images.githubusercontent.com/68853216/109376700-52b2da00-78ec-11eb-9b8f-698204f6e003.png)
 ![allproducts](https://user-images.githubusercontent.com/68853216/109376708-6a8a5e00-78ec-11eb-963b-0292485428e2.png)
