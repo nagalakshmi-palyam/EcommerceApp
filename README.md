@@ -9,10 +9,14 @@
    * Architecture : MVVM(Architectural Components : Livadata,View Model)
    * Database : Roomdatase (Library)
 # Screenshots and Description :
+
+* Splash Activity and SignUp Activity : 
+  1. SignUpActivity to register the user details. 
+  2. Here these user details are inserting into database and business logic separated from the UI
 ![splas](https://user-images.githubusercontent.com/68853216/109377770-81807e80-78f3-11eb-9a9d-4191fed15f23.png)
 ![signUP](https://user-images.githubusercontent.com/68853216/109376650-1da68780-78ec-11eb-98db-50c0a3a1321e.png)
 
- * LoginActivity and MAinACtivity :
+* LoginActivity and MAinACtivity :
    1. Login Activity here we Validating the user details based on Search query of database.
    2. MainActivity has a container to launch products fragment.It has a SearchView,
       NavigationDrawer and toolbar with actions.
@@ -39,5 +43,6 @@
 ![navigation](https://user-images.githubusercontent.com/68853216/109376719-8130b500-78ec-11eb-9c48-489160a098c7.png)
 
 * ProfileActivity :
-  1. Onclick profile item in the Navigation Drawer we can navigate to this activity which displays the registered user details.
+  1. Onclick profile item in the Navigation Drawer we can navigate to this activity which displays 
+     the registered user details.
  ![profile](https://user-images.githubusercontent.com/68853216/109376723-9279c180-78ec-11eb-837a-219ae7098745.png)
