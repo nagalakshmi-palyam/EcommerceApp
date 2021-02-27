@@ -8,11 +8,7 @@
    * Additional Components : RecycyclerView,Fragments,ViewPager and YoutubePlayerView
    * Architecture : MVVM(Architectural Components : Livadata,View Model)
    * Database : Roomdatase (Library)
-
 # Screenshots and Description :
-  * Splash Activity and SignUp Activity : 
-    1. SignUpActivity to register the user details. 
-    2. Here these user details are inserting into database and business logic separated from the UI 
 ![splas](https://user-images.githubusercontent.com/68853216/109377770-81807e80-78f3-11eb-9a9d-4191fed15f23.png)
 ![signUP](https://user-images.githubusercontent.com/68853216/109376650-1da68780-78ec-11eb-98db-50c0a3a1321e.png)
 
